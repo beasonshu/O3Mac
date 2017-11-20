@@ -7,13 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E565E441FC2AA3F00F91ED0 /* NeoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E565E431FC2AA2E00F91ED0 /* NeoSwift.framework */; };
+		6E565E451FC2AA3F00F91ED0 /* NeoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E565E431FC2AA2E00F91ED0 /* NeoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EB248AC1FC1148B00DBD407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB248AB1FC1148B00DBD407 /* AppDelegate.swift */; };
 		6EB248AE1FC1148B00DBD407 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB248AD1FC1148B00DBD407 /* ViewController.swift */; };
 		6EB248B01FC1148B00DBD407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EB248AF1FC1148B00DBD407 /* Assets.xcassets */; };
 		6EB248B31FC1148B00DBD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB248B11FC1148B00DBD407 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6E565E461FC2AA3F00F91ED0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6E565E451FC2AA3F00F91ED0 /* NeoSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6E565E431FC2AA2E00F91ED0 /* NeoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NeoSwift.framework; sourceTree = "<group>"; };
 		6EB248A81FC1148B00DBD407 /* O3Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = O3Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB248AB1FC1148B00DBD407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EB248AD1FC1148B00DBD407 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E565E441FC2AA3F00F91ED0 /* NeoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +71,7 @@
 		6EB248AA1FC1148B00DBD407 /* O3Mac */ = {
 			isa = PBXGroup;
 			children = (
+				6E565E431FC2AA2E00F91ED0 /* NeoSwift.framework */,
 				6EB248AB1FC1148B00DBD407 /* AppDelegate.swift */,
 				6EB248AD1FC1148B00DBD407 /* ViewController.swift */,
 				6EB248AF1FC1148B00DBD407 /* Assets.xcassets */,
@@ -73,6 +92,7 @@
 				6EB248A41FC1148B00DBD407 /* Sources */,
 				6EB248A51FC1148B00DBD407 /* Frameworks */,
 				6EB248A61FC1148B00DBD407 /* Resources */,
+				6E565E461FC2AA3F00F91ED0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +286,10 @@
 				CODE_SIGN_ENTITLEMENTS = O3Mac/O3Mac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/O3Mac",
+				);
 				INFOPLIST_FILE = O3Mac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = network.o3.O3Mac;
@@ -281,6 +305,10 @@
 				CODE_SIGN_ENTITLEMENTS = O3Mac/O3Mac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/O3Mac",
+				);
 				INFOPLIST_FILE = O3Mac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = network.o3.O3Mac;
